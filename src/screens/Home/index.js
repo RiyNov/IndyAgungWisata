@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import {View} from 'react-native';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import MainScreen from './MainScreen';
+import ProductDetailScreen from './ProductDetailScreen';
+import ProductListScreen from './ProductListScreen';
 
 import styles from './styles';
 
@@ -12,7 +13,8 @@ export default function HomeScreen() {
   return (
     <View style={styles.screen}>
       <Header />
-      <MainScreen />
+      <ProductListScreen />
+      {/* <ProductDetailScreen /> */}
       <Footer footerText={footerText} />
     </View>
   );

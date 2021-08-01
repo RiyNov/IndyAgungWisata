@@ -3,10 +3,10 @@ import {Image, Text, View} from 'react-native';
 
 import styles from './styles';
 
-export default function Product({productName, productPrice}) {
+export default function Product({productName, productPrice, imagePath}) {
   return (
     <View style={styles.container}>
-      <Image style={styles.productImage} />
+      <Image style={styles.productImage} source={imagePath} />
       <View style={styles.productDetailContainer}>
         <View style={styles.productNameContainer}>
           <Text style={styles.productName}>{productName}</Text>
