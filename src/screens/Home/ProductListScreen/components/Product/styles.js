@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   productImage: {
-    backgroundColor: 'blue',
+    marginVertical: 3,
     height: 36,
     width: 36,
     borderRadius: 18,

@@ -70,7 +70,7 @@ class ProductListScreen extends Component {
 
   render() {
     return (
-      <View style={styles.screen}>
+      <View style={styles.container}>
         <Header
           navigation={this.props.navigation}
           title={'INDY\nAGUNG\nWISATA'}
