@@ -6,8 +6,10 @@
  * @flow strict-local
  */
 
+import 'react-native-gesture-handler';
 import React from 'react';
 import {SafeAreaView, StatusBar, useColorScheme, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import HomeScreen from './src/screens/Home';
@@ -20,12 +22,15 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View>
-        <HomeScreen />
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <SafeAreaView style={backgroundStyle}>
+        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+        <View>
+          {/* <HomeNavigator /> */}
+          <HomeScreen />
+        </View>
+      </SafeAreaView>
+    </NavigationContainer>
   );
 };
 

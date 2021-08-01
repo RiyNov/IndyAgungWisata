@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {View} from 'react-native';
+import Footer from '../../../components/Footer';
+import Header from '../../../components/Header';
 import News from './components/News';
 import ProductsList from './components/ProductsList';
 import SearchInputBar from './components/SearchInputBar';
@@ -62,13 +64,24 @@ const data = [
 ];
 
 class ProductListScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <SearchInputBar />
-        <News />
-        <Separator />
-        <ProductsList productList={data} />
+      <View style={styles.screen}>
+        <Header
+          navigation={this.props.navigation}
+          title={'INDY\nAGUNG\nWISATA'}
+        />
+        <View style={styles.container}>
+          <SearchInputBar />
+          <News />
+          <Separator />
+          <ProductsList navigation={this.props.navigation} productList={data} />
+        </View>
+        <Footer />
       </View>
     );
   }

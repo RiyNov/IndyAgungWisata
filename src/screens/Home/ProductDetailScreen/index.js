@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
+import Footer from '../../../components/Footer';
+import Header from '../../../components/Header';
 import ProductDetail from './components/ProductDetail';
 
 import styles from './styles';
@@ -57,10 +59,21 @@ const data = [
 ];
 
 export default class ProductDetailScreen extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <ProductDetail data={data} />
+      <View style={styles.screen}>
+        <Header
+          navigation={this.props.navigation}
+          title={'INDY\nAGUNG\nWISATA'}
+        />
+        <View style={styles.container}>
+          <ProductDetail data={data} />
+        </View>
+        <Footer footerText="ITINERARY" />
       </View>
     );
   }

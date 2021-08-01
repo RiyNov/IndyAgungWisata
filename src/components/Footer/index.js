@@ -4,7 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import styles from './styles';
 
-export default function Footer({footerText}) {
+export default function Footer({navigation, footerText}) {
   return (
     <View>
       <LinearGradient

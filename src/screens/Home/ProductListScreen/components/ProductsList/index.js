@@ -4,14 +4,15 @@ import Product from '../Product';
 
 import styles from './styles';
 
-export default function ProductsList({productList}) {
+export default function ProductsList({navigation, productList}) {
   return (
     <View style={styles.container}>
       <FlatList
         data={productList}
         keyExtractor={({name}) => name}
         renderItem={({item}) => (
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ProductDetailScreen')}>
             <Product
               productName={item.name}
               productPrice={item.price}

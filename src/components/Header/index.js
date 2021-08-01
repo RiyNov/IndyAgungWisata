@@ -5,7 +5,6 @@ import LinearGradient from 'react-native-linear-gradient';
 import styles from './styles';
 
 export default function Header({navigation, title, isSearch}) {
-  title = 'Indy\nAgung\nWisata';
   return (
     <View>
       <LinearGradient
@@ -14,16 +13,14 @@ export default function Header({navigation, title, isSearch}) {
         colors={['#00E936', '#008605']}
         style={styles.container}>
         <View style={styles.subContainer}>
-          <TouchableOpacity
-          //   onPress={() => navigation.openDrawer()}
-          >
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <Image
               style={styles.icon}
               source={require('../../assets/icons/burger_menu.png')}
             />
           </TouchableOpacity>
           <View style={styles.titleContainer}>
-            <Text style={styles.title}>{title.toUpperCase()}</Text>
+            <Text style={styles.title}>{title}</Text>
           </View>
         </View>
         <View style={styles.subContainer}>
