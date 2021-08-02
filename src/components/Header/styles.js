@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 15,
     color: 'white',
-    fontWeight: '900',
+    fontWeight: Platform.OS === 'ios' ? '900' : 'bold',
     textAlign: 'center',
   },
   itemGroup: {

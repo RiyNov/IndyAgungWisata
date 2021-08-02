@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 16,
     color: '#008605',
-    fontWeight: '900',
+    fontWeight: Platform.OS === 'ios' ? '900' : 'bold',
   },
 });
 

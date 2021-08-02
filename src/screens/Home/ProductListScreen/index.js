@@ -1,4 +1,3 @@
-import {useIsFocused} from '@react-navigation/native';
 import React from 'react';
 import {View} from 'react-native';
 import {useDispatch} from 'react-redux';
@@ -94,11 +93,17 @@ const data = [
 
 export default function ProductListScreen({navigation}) {
   const dispatch = useDispatch();
-  const isFocused = useIsFocused();
 
-  if (isFocused) {
-    dispatch(setHeaderTitle('INDY\nAGUNG\nWISATA'));
-  }
+  React.useEffect(() => {
+    const unsubscribe = navigation.addListener('focus', () => {
+      // The screen is focused
+      // Call any action
+      dispatch(setHeaderTitle('INDY\nAGUNG\nWISATA'));
+    });
+
+    // Return the function to unsubscribe from the event so it gets removed on unmount
+    return unsubscribe;
+  }, [dispatch, navigation]);
 
   return (
     <View style={styles.container}>
