@@ -1,10 +1,13 @@
 import React from 'react';
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import {useSelector} from 'react-redux';
 
 import styles from './styles';
 
-export default function Header({navigation, title, isSearch}) {
+export default function Header({navigation, isSearch}) {
+  const headerState = useSelector(state => state);
+
   return (
     <View>
       <LinearGradient
@@ -20,7 +23,7 @@ export default function Header({navigation, title, isSearch}) {
             />
           </TouchableOpacity>
           <View style={styles.titleContainer}>
-            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.title}>{headerState.headerTitle}</Text>
           </View>
         </View>
         <View style={styles.subContainer}>

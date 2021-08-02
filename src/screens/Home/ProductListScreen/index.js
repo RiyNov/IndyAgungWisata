@@ -1,7 +1,10 @@
-import React, {Component} from 'react';
+import {useIsFocused} from '@react-navigation/native';
+import React from 'react';
 import {View} from 'react-native';
+import {useDispatch} from 'react-redux';
 import Footer from '../../../components/Footer';
 import Header from '../../../components/Header';
+import {setHeaderTitle} from '../../../redux';
 import News from './components/News';
 import ProductsList from './components/ProductsList';
 import SearchInputBar from './components/SearchInputBar';
@@ -63,28 +66,50 @@ const data = [
   },
 ];
 
-class ProductListScreen extends Component {
-  constructor(props) {
-    super(props);
+// class ProductListScreen extends Component {
+//   constructor(props) {
+//     super(props);
+//   }
+
+//   render() {
+//     return (
+//       <View style={styles.container}>
+//         <Header
+//           navigation={this.props.navigation}
+//           title={'INDY\nAGUNG\nWISATA'}
+//         />
+//         <View style={styles.container}>
+//           <SearchInputBar />
+//           <News />
+//           <Separator />
+//           <ProductsList navigation={this.props.navigation} productList={data} />
+//         </View>
+//         <Footer />
+//       </View>
+//     );
+//   }
+// }
+
+// export default ProductListScreen;
+
+export default function ProductListScreen({navigation}) {
+  const dispatch = useDispatch();
+  const isFocused = useIsFocused();
+
+  if (isFocused) {
+    dispatch(setHeaderTitle('INDY\nAGUNG\nWISATA'));
   }
 
-  render() {
-    return (
+  return (
+    <View style={styles.container}>
+      <Header navigation={navigation} />
       <View style={styles.container}>
-        <Header
-          navigation={this.props.navigation}
-          title={'INDY\nAGUNG\nWISATA'}
-        />
-        <View style={styles.container}>
-          <SearchInputBar />
-          <News />
-          <Separator />
-          <ProductsList navigation={this.props.navigation} productList={data} />
-        </View>
-        <Footer />
+        <SearchInputBar />
+        <News />
+        <Separator />
+        <ProductsList navigation={navigation} productList={data} />
       </View>
-    );
-  }
+      <Footer />
+    </View>
+  );
 }
-
-export default ProductListScreen;

@@ -13,6 +13,8 @@ import {NavigationContainer} from '@react-navigation/native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import HomeScreen from './src/screens/Home';
+import {Provider} from 'react-redux';
+import {Store} from './src/redux';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -22,15 +24,17 @@ const App = () => {
   };
 
   return (
-    <NavigationContainer>
-      <SafeAreaView style={backgroundStyle}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <View>
-          {/* <HomeNavigator /> */}
-          <HomeScreen />
-        </View>
-      </SafeAreaView>
-    </NavigationContainer>
+    <Provider store={Store}>
+      <NavigationContainer>
+        <SafeAreaView style={backgroundStyle}>
+          <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+          <View>
+            {/* <HomeNavigator /> */}
+            <HomeScreen />
+          </View>
+        </SafeAreaView>
+      </NavigationContainer>
+    </Provider>
   );
 };
 

@@ -66,10 +66,7 @@ export default class ProductDetailScreen extends Component {
   render() {
     return (
       <View style={styles.screen}>
-        <Header
-          navigation={this.props.navigation}
-          title={'INDY\nAGUNG\nWISATA'}
-        />
+        <Header navigation={this.props.navigation} />
         <View style={styles.container}>
           <ProductDetail data={data} />
         </View>
