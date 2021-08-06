@@ -2,7 +2,7 @@ import {Platform, StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    height: 60,
+    height: 63,
     backgroundColor: '#3a5e8e',
     paddingHorizontal: 20,
     // paddingVertical: 5,
@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   titleContainer: {
-    marginLeft: 20,
+    marginLeft: 15,
     alignItems: 'center',
   },
   title: {
-    fontSize: 15,
+    fontSize: 16,
     color: 'white',
     fontWeight: Platform.OS === 'ios' ? '900' : 'bold',
     textAlign: 'center',
@@ -40,19 +40,15 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: 'white',
   },
-  iconContainer: {},
-  icon: {
-    height: 20,
-    width: 20,
+  burgerMenu: {
+    marginLeft: -6,
   },
   searchIcon: {
     height: 25,
     width: 25,
   },
   middleIcon: {
-    height: 20,
-    width: 20,
-    marginHorizontal: 30,
+    marginHorizontal: 20,
   },
 });
 

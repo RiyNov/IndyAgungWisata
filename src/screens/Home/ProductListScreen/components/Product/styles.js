@@ -44,9 +44,6 @@ const styles = StyleSheet.create({
   },
   arrowIcon: {
     alignSelf: 'center',
-    backgroundColor: 'red',
-    height: 15,
-    width: 15,
   },
 });
 

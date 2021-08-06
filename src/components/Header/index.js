@@ -1,7 +1,10 @@
 import React from 'react';
-import {Image, Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import {useSelector} from 'react-redux';
+
+// Import vector icons
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import styles from './styles';
 
@@ -17,9 +20,11 @@ export default function Header({navigation, isSearch}) {
         style={styles.container}>
         <View style={styles.subContainer}>
           <TouchableOpacity onPress={() => navigation.openDrawer()}>
-            <Image
-              style={styles.icon}
-              source={require('../../assets/icons/burger_menu.png')}
+            <Icon
+              name="menu"
+              size={35}
+              color="#fff"
+              style={styles.burgerMenu}
             />
           </TouchableOpacity>
           <View style={styles.titleContainer}>
@@ -30,24 +35,20 @@ export default function Header({navigation, isSearch}) {
           <TouchableOpacity
           //   onPress={() => navigation.navigate('Mail')}
           >
-            <Image
-              style={styles.icon}
-              source={require('../../assets/icons/mail.png')}
-            />
+            <Icon name="mail" size={25} color="#fff" />
           </TouchableOpacity>
           <TouchableOpacity
           //   onPress={() => navigation.navigate('UserProfile')}
           >
-            <Image
+            <Icon
+              name="person"
+              size={25}
+              color="#fff"
               style={styles.middleIcon}
-              source={require('../../assets/icons/people.png')}
             />
           </TouchableOpacity>
           <TouchableOpacity>
-            <Image
-              style={styles.icon}
-              source={require('../../assets/icons/camera.png')}
-            />
+            <Icon name="camera" size={25} color="#fff" />
           </TouchableOpacity>
         </View>
       </LinearGradient>

@@ -1,6 +1,9 @@
 import React from 'react';
 import {Image, Text, View} from 'react-native';
 
+// Import vector icons
+import Icon from 'react-native-vector-icons/Ionicons';
+
 import styles from './styles';
 
 export default function Product({productName, productPrice, imagePath}) {
@@ -14,7 +17,12 @@ export default function Product({productName, productPrice, imagePath}) {
         <View style={styles.productDetails}>
           <Text style={styles.productDetailText}>{'Start\nfrom'}</Text>
           <Text style={styles.productPrice}>{productPrice}</Text>
-          <Image style={styles.arrowIcon} />
+          <Icon
+            name="caret-forward-sharp"
+            size={15}
+            color="#008605"
+            style={styles.arrowIcon}
+          />
         </View>
       </View>
     </View>

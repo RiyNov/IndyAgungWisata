@@ -14,6 +14,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		4C2D6547C88AABC15A1C5A1C /* libPods-IndyAgungWisata-IndyAgungWisataTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E358A8AB8C91CF272E59803 /* libPods-IndyAgungWisata-IndyAgungWisataTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8F51365926BA9FF000B9981F /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8F51365826BA9FF000B9981F /* fonts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		7DAEDF6FF0DA4313B751389F /* Pods-IndyAgungWisata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndyAgungWisata.release.xcconfig"; path = "Target Support Files/Pods-IndyAgungWisata/Pods-IndyAgungWisata.release.xcconfig"; sourceTree = "<group>"; };
 		7E358A8AB8C91CF272E59803 /* libPods-IndyAgungWisata-IndyAgungWisataTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IndyAgungWisata-IndyAgungWisataTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = IndyAgungWisata/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F51365826BA9FF000B9981F /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		C44E0A026C15F71FC79AF8E6 /* Pods-IndyAgungWisata.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IndyAgungWisata.debug.xcconfig"; path = "Target Support Files/Pods-IndyAgungWisata/Pods-IndyAgungWisata.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -114,7 +116,6 @@
 				538083DA32BE91307CB88E76 /* Pods-IndyAgungWisata-IndyAgungWisataTests.debug.xcconfig */,
 				39DA3A8E29B8D0D19538ACC5 /* Pods-IndyAgungWisata-IndyAgungWisataTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,6 +129,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				8F51365826BA9FF000B9981F /* fonts */,
 				13B07FAE1A68108700A75B9A /* IndyAgungWisata */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* IndyAgungWisataTests */,
@@ -243,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F51365926BA9FF000B9981F /* fonts in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
