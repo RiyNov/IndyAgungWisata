@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   newsBox: {
-    padding: 10,
+    padding: 20,
     marginBottom: 15,
     backgroundColor: '#CDCDCD',
   },

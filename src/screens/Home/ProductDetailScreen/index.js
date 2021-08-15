@@ -68,9 +68,9 @@ export default class ProductDetailScreen extends Component {
       <View style={styles.screen}>
         <Header navigation={this.props.navigation} />
         <View style={styles.container}>
-          <ProductDetail data={data} />
+          <ProductDetail data={data} navigation={this.props.navigation} />
         </View>
-        <Footer footerText="ITINERARY" />
+        <Footer navigation={this.props.navigation} footerText="ITINERARY" />
       </View>
     );
   }

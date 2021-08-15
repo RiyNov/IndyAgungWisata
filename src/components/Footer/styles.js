@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 15,
     color: 'white',
-    fontWeight: '900',
+    fontWeight: 'bold',
   },
   icon: {
     height: 45,

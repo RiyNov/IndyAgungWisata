@@ -1,10 +1,10 @@
 import React from 'react';
-import {FlatList, Text, View} from 'react-native';
+import {FlatList, Text, TouchableOpacity, View} from 'react-native';
 import ProductDetailItem from '../ProductDetailItem';
 
 import styles from './styles';
 
-export default function ProductDetail({data}) {
+export default function ProductDetail({data, navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
@@ -15,7 +15,12 @@ export default function ProductDetail({data}) {
         data={data}
         keyExtractor={({month}) => month}
         renderItem={({item}) => (
-          <ProductDetailItem month={item.month} totalSeat={item.totalSeat} />
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('MonthDetailScreen', {monthName: item.month})
+            }>
+            <ProductDetailItem month={item.month} totalSeat={item.totalSeat} />
+          </TouchableOpacity>
         )}
       />
     </View>

@@ -12,9 +12,11 @@ export default function Footer({navigation, footerText}) {
         end={{x: 1, y: 0}}
         colors={['#00E936', '#008605']}
         style={styles.container}>
-        <View style={styles.textContainer}>
+        <TouchableOpacity
+          style={styles.textContainer}
+          onPress={() => navigation.navigate('ItineraryScreen')}>
           <Text style={styles.text}>{footerText}</Text>
-        </View>
+        </TouchableOpacity>
         <TouchableOpacity>
           <Image
             style={styles.icon}
